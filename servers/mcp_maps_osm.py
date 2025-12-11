@@ -3,7 +3,7 @@ from typing import List
 import json
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP("maps", port=8000)
+mcp = FastMCP("maps", host="0.0.0.0", port=8001)
 
 @mcp.tool()
 def search_restaurants(city_name: str, max_results: int=10) -> List[str]:
